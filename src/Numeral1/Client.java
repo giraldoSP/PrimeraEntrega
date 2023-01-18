@@ -6,8 +6,10 @@ public class Client {
 
     String id;
     String name;
-    static Client[] clientArrayList = new Client[3];
+    static Client[] clientArray = new Client[3];
 
+    public Client() {
+    }
 
     public Client(String id, String name) {
         if(ValidateClientData.ValidatationIsInt(id)){
