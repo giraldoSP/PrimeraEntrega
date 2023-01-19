@@ -1,5 +1,6 @@
 package Numeral2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -9,7 +10,10 @@ public class Menu {
         int position;
         String name;
         String id;
-        Client c = null;
+        ArrayList array = new ArrayList<>();
+        DeleteClient deleteClient = new DeleteClient();
+        AddClient  addClient = new AddClient();
+
         Scanner sn = new Scanner(System.in);
         do{
 
@@ -29,20 +33,23 @@ public class Menu {
                     System.out.println("Ingrese id de cliente");
                     id = sn.nextLine();
                     Client client = new Client(id, name);
-                    AddClient.AddClientToArray(client);
+                    addClient.AddClientToArray(client);
                     break;
 
                 case 2:
-                    System.out.println("Ingrese la posicion del cliente que desea eliminar");
-                    position = sn.nextInt();
+                    System.out.println("Ingrese la cedula del cliente que desea eliminar");
+                    id = sn.nextLine();
+                    deleteClient.delete(id);
 
                 case 3:
-                    printArray.print(AddClient.clientArray);
+                    System.out.println("Ingrese la cedula del cliente que desea buscar");
+                    id = sn.nextLine();
+
 
             }
 
 
-        }while (option != 4);
+        }while (option != 5);
 
     }
 }

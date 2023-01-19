@@ -1,16 +1,26 @@
 package Numeral2;
 
-import java.util.ArrayList;
+import Numeral1.AddClient;
+
+import java.util.HashMap;
 
 public class DeleteClient {
+    CreateHashMap createHashMap = new CreateHashMap();
 
-    public void DeleteElement(int pos, ArrayList arrayList){
-        if(arrayList.size()>3){
-           arrayList.remove(pos);
-        }else{
-            arrayList.set(pos, null);
-        }
-
+    HashMap<String, Client> hash = createHashMap.getHashMapClient();
+    public DeleteClient() {
     }
+
+
+    public void delete(String id){
+        try {
+            hash.remove(id);
+            createHashMap.setHashMapClient(hash);
+        }catch (Exception e){
+            System.out.println("El error es= " + e);
+        }
+    }
+
+
 
 }
