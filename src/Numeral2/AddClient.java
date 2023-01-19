@@ -1,4 +1,4 @@
-package Numeral1;
+package Numeral2;
 
 import java.util.Arrays;
 

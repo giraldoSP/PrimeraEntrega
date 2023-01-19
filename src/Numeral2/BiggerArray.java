@@ -1,6 +1,4 @@
-package Numeral1;
-
-import java.util.Arrays;
+package Numeral2;
 
 public class BiggerArray {
     public BiggerArray() {

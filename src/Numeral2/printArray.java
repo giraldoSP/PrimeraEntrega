@@ -1,4 +1,4 @@
-package Numeral1;
+package Numeral2;
 
 public class printArray {
 
