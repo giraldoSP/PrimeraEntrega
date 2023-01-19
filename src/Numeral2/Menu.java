@@ -13,7 +13,7 @@ public class Menu {
         ArrayList array = new ArrayList<>();
         DeleteClient deleteClient = new DeleteClient();
         AddClient  addClient = new AddClient();
-
+        SearchObject searchObject = new SearchObject();
         Scanner sn = new Scanner(System.in);
         do{
 
@@ -40,12 +40,21 @@ public class Menu {
                     System.out.println("Ingrese la cedula del cliente que desea eliminar");
                     id = sn.nextLine();
                     deleteClient.delete(id);
+                    break;
 
                 case 3:
                     System.out.println("Ingrese la cedula del cliente que desea buscar");
                     id = sn.nextLine();
+                    searchObject.Search(id);
+                    break;
+
+                case 4:
+                    System.out.println("Imprimir");
 
 
+                    break;
+                default:
+                    System.out.println("Escoga una opcion correcta");
             }
 
 

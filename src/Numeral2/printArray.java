@@ -6,7 +6,15 @@ public class printArray {
 
     CreateHashMap createHashMap = new CreateHashMap();
 
-    createHashMap.
+    HashMap<String, Client> array = createHashMap.getHashMapClient();
+
+    public void Print(){
+        for (String id: array.keySet()) {
+            String key = id.toString();
+            String value = array.get(id).toString();
+            System.out.println(key + " " + value);
+        }
+    }
 
 
 }
